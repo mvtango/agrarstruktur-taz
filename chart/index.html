@@ -1,0 +1,27 @@
+<html><head><title>taz: MV gegen NRW</title></head>
+<body style="background-color: black; ">
+<div style="padding: 50px; width: 630px; margin: 0 auto;">
+	<div>
+<iframe width="624" height="312" src="frame.html" frameborder="0"></iframe>
+<br/>
+<br/>
+<div style="width: 605px; background: #e0e0e0; padding: 10px; font-family: Sans, Arial;">
+Zur <a href="taz-mirror/taz.de/Die-Wahrheit/137713/index.html">taz-Simulation</a>
+</div>
+<br/>
+<textarea readonly="yes" style="width: 624px; height: 80px; ">
+<iframe width="624" height="312" src="frame.html" frameborder="0"></iframe>
+</textarea>
+
+<br>
+</div>
+</div>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script>
+	var $t=$("textarea");
+	var dl=document.location.href;
+	dl=dl.replace(/\/[^/]*$/,"/"+$("iframe").attr("src"))
+	$t.val($t.val().replace("frame.html",dl));
+
+</script>
+</html>

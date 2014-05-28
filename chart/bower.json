@@ -1,0 +1,25 @@
+{
+  "name": "chart",
+  "version": "0.0.1",
+  "authors": [
+    "Martin Virtel <martin.virtel@gmail.com>"
+  ],
+  "description": "Reveal.js Grafik / Agrarstruktur / taz.de",
+  "main": "frame.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "g.raphael": "~0.4.1",
+    "jquery": "~2.1.1",
+    "raphael": "~2.1.2",
+    "reveal.js": "~2.6.2",
+    "underscore": "~1.6.0"
+  }
+}
