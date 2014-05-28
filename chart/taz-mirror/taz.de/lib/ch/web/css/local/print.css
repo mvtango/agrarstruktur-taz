@@ -1,0 +1,32 @@
+
+
+@media print {
+
+	/* Soll NICHT ausgedruckt werden ! */
+	div#counter,
+	div#adOverlay,
+	div#fake,
+	div#skirt,
+	ul#globalnavigation,
+	div.community,
+	div.float>div.head,
+	div.style_accordion,
+	span.tail,
+	div.sectfoot {
+    display: none !important;
+	}
+	
+	/* Seitenumbrueche */
+	#pages > .page > .body {
+  	display: block !important;
+	}
+	
+	/* Font-Verschiebung */
+	p.article, .sect_article > .sectbody > h6,
+	.head > .search > .frame > input {
+	  top: 0 !important;
+	}
+	
+}
+
+
