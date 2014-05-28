@@ -189,8 +189,7 @@ section .graphdiv {
 
 
 .graphdiv .label {
-	color: #000000;
-	font-size: 110% !important; 
+	color: #404040;
 }
 
 .graphdiv .left {

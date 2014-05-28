@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="bower_components/reveal.js/css/reveal.min.css">
-		<link rel="stylesheet" href="css/taz.css" id="theme">
+		<link rel="stylesheet" href="css/taz_1.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="bower_components/reveal.js/lib/css/zenburn.css">
@@ -111,7 +111,7 @@
 					<p><br/><br/><br/><br/><br/><br/><br/>
 					</p>
 					<p style="width:120%; left: -10%; position: relative">Mecklenburg-Vorpommern wird von riesigen Agrarfabriken beherrscht, Erben der ehemaligen sozialistischen Produktionsgenossenschaften. Nordrhein-Westfalen ist von kleineren Höfen geprägt.</p>
-					<p style="font-weight: normal !important; border: 0; margin: 0;"><br/>Zum Vergleich: Tempelhof (Freifläche) <img style="border: 0; vertical-align: middle; margin:0" src="tempelhof.png"> 230 ha </p>
+					<p style="font-weight: normal !important; border: 0; margin: 0;"><br/>Zum Vergleich: Tempelhofer Feld <img style="border: 0; vertical-align: middle; margin:0" src="tempelhof.png"> 230 ha </p>
 				</section>
 				<section  data-transition="linear" data-background="img/mcpomnrw.png">
 					<div class="graphdiv" style="margin-top: 20%">
@@ -204,7 +204,7 @@
 		<script src="bower_components/reveal.js/lib/js/head.min.js"></script>
 		<script src="bower_components/reveal.js/js/reveal.min.js"></script>
 		<script src="bower_components/raphael/raphael.js"></script>
-		<script src="bower_components/g.raphael/g.raphael-min.js"></scr	ipt>
+		<script src="bower_components/g.raphael/g.raphael-min.js"></script>
 		<script src="bower_components/g.raphael/g.pie-min.js"></script>
 		<script src="bower_components/g.raphael/g.bar.js"></script>
 		<script>
@@ -244,7 +244,7 @@
 					$("section").on("click",function() { Reveal.next() });
 					$(".credit").css({"z-index" : "9999"});
 					$(".credit a").attr("target","_blank");
-					/* Raphael.g.txtattr.font="30px Arial, sans-serif"; */	
+					Raphael.g.txtattr.font="30px Arial, sans-serif";	
 					$(".chart.pie").each(function(e) {
 						var p=Raphael(this);
 						var data={};

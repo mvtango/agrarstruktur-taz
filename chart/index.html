@@ -1,4 +1,9 @@
-<html><head><title>taz: MV gegen NRW</title></head>
+<!doctype html>
+<html><head>
+	<title>taz: MV gegen NRW</title>
+		<meta charset="utf-8">
+	
+</head>
 <body style="background-color: black; ">
 <div style="padding: 50px; width: 630px; margin: 0 auto;">
 	<div>
@@ -14,14 +19,28 @@ Zur <a href="taz-mirror/taz.de/Die-Wahrheit/137713/index.html">taz-Simulation</a
 </textarea>
 
 <br>
+<input type="button" data-url="frame.html" value="Aktuelle Version">
+<br/>
+<input type="button" data-url="frame_1.html" value="Version 1 (lange Texte, wertend, Flächenvergleich Tempelhof)">
 </div>
 </div>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script>
-	var $t=$("textarea");
-	var dl=document.location.href;
-	dl=dl.replace(/\/[^/]*$/,"/"+$("iframe").attr("src"))
-	$t.val($t.val().replace("frame.html",dl));
-
+	function update(a) {
+		var $t=$("textarea");
+		var dl=document.location.href;
+		dl=dl.replace(/\/[^/]*$/,"/"+a);
+		$t.val($t.val().replace(/src="[^"]+"/,'src="'+dl+'"'));
+		$("iframe").attr("src",a);
+	}
+	
+	$("input[type=button]").on("click", function() {
+		var $a=$(this).data()
+		update($a.url);
+	});
+	
+	update("frame.html");
+	
+	
 </script>
 </html>
