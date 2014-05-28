@@ -90,7 +90,7 @@
 					<br/>
 					</p>
 					
-					<p><br/><br/><br/></p>
+					<p><br/></p>
 					<p style="font-weight: normal !important; border: 0; margin: 0;"><br/>Zum Vergleich: Berlin <img style="border: 0; vertical-align: middle; margin:0" src="berlin-63x53.png"> 892 qkm</p>
 
 				</section>
@@ -151,8 +151,7 @@
 					<p><br/><br/></p>
 				</section>
 				<section  data-transition="linear" data-background="img/mcpomnrw.png">
-					<div class="credit">
-						Quelle: <a href="http://www.landtag.brandenburg.de/media_fast/5701/Gutachten%20Prof.%20Kl%C3%BCter%20Entwicklungstendenzen%20brd.%20Landwirtschaft_03.07.2012%20gesamt.pdf">Landtag Brandenburg</a>.
+					<div class="credit">Quelle: <a href="http://www.landtag.brandenburg.de/media_fast/5701/Gutachten%20Prof.%20Kl%C3%BCter%20Entwicklungstendenzen%20brd.%20Landwirtschaft_03.07.2012%20gesamt.pdf">Landtag Brandenburg</a>.
 					</div>
 
 					<div class="graphdiv" style="margin-top: 25%">
@@ -242,7 +241,7 @@
 			});
 			$(document).ready(function() {
 					$("section").on("click",function() { Reveal.next() });
-					$(".credit").css({"z-index" : "9999"});
+					$(".credit").css({"z-index" : "9999 !important"});
 					$(".credit a").attr("target","_blank");
 					Raphael.g.txtattr.font="35px Arial, sans-serif";	
 					$(".chart.pie").each(function(e) {
@@ -282,10 +281,10 @@
 						/* p.txtattr.fontSize="46px"; */
 						var dv=data.values[1];
 						if (typeof dv != "undefined") {
-							pp={ x: Math.floor(cx+p.width*(isNaN(dv.x) ?  0.25 : dv.x)), y: Math.floor(cy+p.height*(isNaN(dv.y) ? 0.43 : dv.y)), p: dv.position ||  "down" };
+							pp={ x: Math.floor(cx+p.width*(isNaN(dv.x) ?  0.02 : dv.x)), y: Math.floor(cy+p.height*(isNaN(dv.y) ? 0.23 : dv.y)), p: dv.position ||  "down" };
 							/* console.log(pp); */
 							try {
-								p.popup(pp.x, pp.y, dv.label, pp.p, 12 );
+								p.flag(pp.x, pp.y, dv.label, pp.p, 12 );
 							} catch(e) {
 								console.log(e);
 							}								
