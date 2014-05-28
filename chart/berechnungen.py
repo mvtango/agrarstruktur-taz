@@ -17,6 +17,4 @@ print "Höhe lt. %d" % (math.sqrt(a/s)*38,)
 
 print "tf"
 km=math.sqrt(66*65)
-print "Breite Tempelhof: %s" % (km*2.094)
-print "Breite Fußballfeld: %s" % (km*0.105)
-print "Höhe Fußballfeld: %s" % (km*0.068)
+print "Breite: %s" % (km*2.094)
