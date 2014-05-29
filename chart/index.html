@@ -2,7 +2,16 @@
 <html><head>
 	<title>taz: MV gegen NRW</title>
 		<meta charset="utf-8">
-	
+<style>
+
+  input[type=button].active {
+
+			background-color: #ffffff;
+			border-color: red;
+	  
+  }
+
+</style>	
 </head>
 <body style="background-color: black; ">
 <div style="padding: 50px; width: 630px; margin: 0 auto;">
@@ -35,11 +44,13 @@ Zur <a href="taz-mirror/taz.de/Die-Wahrheit/137713/index.html">taz-Simulation</a
 	}
 	
 	$("input[type=button]").on("click", function() {
+		$("input[type=button]").removeClass("active");
+		$(this).addClass("active");
 		var $a=$(this).data()
 		update($a.url);
 	});
 	
-	update("frame.html");
+	$("input[type=button]:first").click();
 	
 	
 </script>
