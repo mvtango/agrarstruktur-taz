@@ -1,0 +1,29 @@
+{
+  "name": "taz-agrarstruktur",
+  "version": "0.0.1",
+  "homepage": "https://github.com/mvtango/agrarstruktur-taz",
+  "authors": [
+    "Martin Virtel <martin.virtel@gmail.com>"
+  ],
+  "description": "Grafik zum Vergleich von MV und NRW",
+  "main": "frame.html",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "g.raphael": "~0.4.1",
+    "reveal.js": "~2.6.2",
+    "jquery": "~2.1.1",
+    "raphael": "~2.1.2",
+    "underscore": "~1.6.0"
+  }
+}
