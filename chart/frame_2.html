@@ -117,12 +117,12 @@
 					<div class="graphdiv" style="margin-top: 25%">
 						<div class="label left" style="" >
 							Nordrhein-Westfalen
-							<div class="chart pieone" data-chartdata="{ title: 'Bruttowertschöpfung 2013: 2,6 Mrd. €', v : 2.6, t: 2.6 }"  >
+							<div class="chart pieone" data-chartdata="{ title: 'Bruttowertschöpfung 1,8 Mrd. €', v : 1.8, t: 1.8 }"  >
 							</div>
 						</div>
 						<div class="label right">
 							Mecklenburg-Vorpommern 
-							<div class="chart pieone" data-chartdata="{ title: 'Bruttowertschöpfung 2013: 1,0 Mrd. Mrd. €', v : 1.0, t: 2.6 }"  >
+							<div class="chart pieone" data-chartdata="{ title: 'Bruttowertschöpfung 0,9 Mrd. Mrd. €', v : 0.9, t: 1.8 }"  >
 							</div>
 						</div>
 					</div>
@@ -136,12 +136,12 @@
 					<div class="graphdiv" style="margin-top: 25%">
 						<div class="label left" style="" >
 							Nordrhein-Westfalen
-							<div class="chart pieone" data-chartdata="{ title: 'Investitionen 2011 pro ha (2013): 817 €', v : 817, t: 817 }"  >
+							<div class="chart pieone" data-chartdata="{ title: 'Investitionen pro ha: 650 €', v : 650, t: 650 }"  >
 							</div>
 						</div>
 						<div class="label right">
 							Mecklenburg-Vorpommern 
-							<div class="chart pieone" data-chartdata="{ title: 'Investitionen 2011 pro ha (2013): 337 €', v : 337, t: 817 }"  >
+							<div class="chart pieone" data-chartdata="{ title: 'Investitionen pro ha: 320 €', v : 320, t: 650 }"  >
 							</div>
 						</div>
 					</div>
@@ -304,15 +304,12 @@
 						var cx=(p.width*0.5);
 						var cy=(p.height*0.5);
 						var r=Math.min(p.height,p.width)*0.2
-						if (data.t==data.v) {
-							dl=[data.t];
-							col=[ "#A80A1A", "#E0A0A0" ];
-						} else {
-							dl=[data.t-data.v, data.v]
-							col=[ "#E0A0A0","#A80A1A" ];
+						var dl=[data.v, data.t-data.v]
+						if (dl[1]==0) {
+							dl=[dl[0]];
 						}
-						p.piechart(cx,cy,r,dl,{ colors: col });
-						console.log("r=",r,"dl=",dl,"data=",data.v); 
+						p.piechart(cx,cy,r,dl,{ colors: [ "#A80A1A", "#E0A0A0" ]});
+						/* console.log("r=",r,"dl=",dl,"data=",data.v); */
 						p.text(p.width/2,p.height*0.2,data.title).attr(Raphael.g.txtattr)
 						.attr({ fill: "#000", "font-size": "30px" });
 					});
